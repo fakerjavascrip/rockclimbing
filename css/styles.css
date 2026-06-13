@@ -1148,7 +1148,7 @@ body.page-contact {
   display: grid;
   grid-template-columns: 1fr minmax(280px, 360px);
   gap: 2.5rem;
-  align-items: stretch;
+  align-items: start;
   min-height: 480px;
 }
 
@@ -1157,7 +1157,7 @@ body.page-contact {
   display: grid;
   grid-template-columns: minmax(250px, 1fr) minmax(300px, 1.5fr);
   gap: 1.25rem;
-  align-items: center;
+  align-items: start;
   background: #1a1a1a;
   min-height: 460px;
   overflow: hidden;
@@ -1193,9 +1193,17 @@ body.page-contact {
 .contact-section-photo {
   width: 100%;
   min-height: 400px;
-  background: url('../images/hero-contact.jpg') center center / contain no-repeat;
+  align-self: start;
+  background: url('../images/hero-contact.jpg') center top / contain no-repeat;
   transform: scale(1.08);
-  transform-origin: center center;
+  transform-origin: top center;
+}
+
+.contact-section-form-wrap {
+  display: flex;
+  flex-direction: column;
+  background: #1a1a1a;
+  align-self: start;
 }
 
 .contact-section-info h2 {
@@ -1223,12 +1231,6 @@ body.page-contact {
   line-height: 1.6;
 }
 
-.contact-section-form-wrap {
-  display: flex;
-  flex-direction: column;
-  background: #1a1a1a;
-  min-height: 100%;
-}
 
 .contact-section .contact-form-card {
   margin-top: 0;
